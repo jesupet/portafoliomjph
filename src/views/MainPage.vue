@@ -1,15 +1,18 @@
 <template>
   <div>
-    <header class="header-container">
-      <video id="background-video" autoplay loop muted>
+    <header class="header-container typewriter">
+      <img src="../assets/portada.jpg" alt="playa" class="img-fluid portada-img">
+      <h1 class=" main-tittle">Hello, my name is Maria.</h1>
+      <!--<video id="background-video" autoplay loop muted>
         <source src="../assets/galaxy.mp4" type="video/mp4">
-      </video>
+      </video>-->
     </header>
     <section id="about-me" class="container">
-      <h1 class="main-title">About Me</h1>
+      <h2 class="main-title">About Me</h2>
       <div class="row">
-        <div class="col-lg-6 col-xs-12">
+        <div class="col-lg-6 col-xs-12 text-center">
           <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
+          
         </div>
         <div class="col-lg-6 col-xs-12">
           <p class="parrafo">
@@ -20,30 +23,22 @@
       </div>
     </section>
     <section id="my-projects" class="container-fluid">
-      <h1 class="main-title">My Projects</h1>
+      <h2 class="main-title">My Projects</h2>
       <div class="row mx-2">
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
+        <div class="col-sm-6 col-xs-12">
+          <button type="button" class="btn btn-purple rounded-pill" to="">Eleam Chile</button>
+          <p class="subtittle">Project Manager / Diseño UX-UI</p>
+          <img src="../assets/eleamchile.png" alt="proyecto1" class="picture img-fluid">
         </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
-        </div>
-        <div class="col-lg-4 col-sm-6 col-xs-12">
-          <img src="../assets/mjp.png" alt="mariajesus" class="picture img-fluid">
+        <div class="col-sm-6 col-xs-12">
+          <button type="button" class="btn btn-purple rounded-pill" to="">Satournow!</button>
+          <p class="subtittle">Proyecto Final Front End / Diseño UX-UI + Front End</p>
+          <img src="../assets/satournow.png" alt="proyecto4" class="picture img-fluid">
         </div>
       </div>
     </section>
     <section id="tool-kit" class="container">
-      <h1 class="main-title">Tool Kit</h1>
+      <h2 class="main-title">Tool Kit</h2>
       <div class="row">
         <div class="col-lg-3 col-sm-6 col-xs-12">
           <img src="../assets/tool_kit_logos/figma.png" alt="mariajesus" class="picture img-fluid">
@@ -64,11 +59,49 @@
 
 
 <style>
-
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.portada-img {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  @media (min-width: 1200px) {
+    min-height: 100vh;
+  }
+}
 #background-video {
   width: 100%;
   height: 80vh;
   object-fit: cover;
+}
+.main-tittle {
+  position: absolute;
+  z-index: 100;
+  color: #fff;
+  font-size: 20px;
+  padding-left: 50px;
+}
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #5241B8; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 4.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #5241B8; }
 }
 section {
   padding-bottom: 20px;
@@ -95,5 +128,17 @@ section {
 }
 .col-sm-6 {
   text-align: center;
+}
+.btn-purple {
+  font-size: 20px;
+}
+.btn-purple:hover {
+  background-color: #fff;
+  color: #5241B8;
+  border-color: #5241B8;
+}
+.subtittle {
+  color:#5241B8;
+  margin-top: 10px;
 }
 </style>

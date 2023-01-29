@@ -1,5 +1,5 @@
 <template>
-  <div class="myprojects">
+  <div class="contactform">
     MY PROJECTS
   </div>
 </template>
@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'MyProjects',
+  name: 'ContactForm',
   
 }
 </script>

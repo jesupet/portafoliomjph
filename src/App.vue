@@ -22,6 +22,10 @@ export default {
 * {
   font-family: 'Karla', sans-serif;
   color: #484F5D;
-  overflow-x: hidden
+  overflow-x: hidden;
+}
+.btn-purple {
+  background-color: #5241B8;
+  color: #fff;
 }
 </style>

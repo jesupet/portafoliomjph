@@ -16,7 +16,7 @@
             <a class="nav-link" href="#">Tool Kit</a>
           </li>
           <li class="nav-item">
-            <button type="button" class="btn btn-purple rounded-pill">Write Me!</button>
+            <button type="button" class="btn btn-purple rounded-pill" to="/#/contact-form">Write Me!</button>
           </li>
         </ul>
       </div>
@@ -40,10 +40,6 @@ export default {
   right: 40px;
   top: 20px;
 
-}
-.btn-purple {
-  background-color: #5241B8;
-  color: #fff;
 }
 .btn-purple:hover {
   background-color: #fff;
