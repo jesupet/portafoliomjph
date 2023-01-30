@@ -2,7 +2,7 @@
   <div>
     <header class="header-container typewriter">
       <img src="../assets/portada.jpg" alt="playa" class="img-fluid portada-img">
-      <h1 class=" main-tittle">Hello, my name is Maria.</h1>
+      <h1 class=" main-tittle">Hello, my name is Maria. I like to learn new things.</h1>
       <!--<video id="background-video" autoplay loop muted>
         <source src="../assets/galaxy.mp4" type="video/mp4">
       </video>-->
@@ -26,14 +26,18 @@
       <h2 class="main-title">My Projects</h2>
       <div class="row mx-2">
         <div class="col-sm-6 col-xs-12">
-          <button type="button" class="btn btn-purple rounded-pill" to="">Eleam Chile</button>
+          <button type="button" class="btn btn-purple rounded-pill" to="">
+            <a href="https://eleamchile.cl" class="link-web" target="_blank">Eleam Chile</a>
+          </button>
           <p class="subtittle">Project Manager / Diseño UX-UI</p>
           <img src="../assets/eleamchile.png" alt="proyecto1" class="picture img-fluid">
         </div>
         <div class="col-sm-6 col-xs-12">
-          <button type="button" class="btn btn-purple rounded-pill" to="">Satournow!</button>
+          <button type="button" class="btn btn-purple rounded-pill">
+            <a href="https://jesupet.github.io/SaturnoGit/" class="link-web" target="_blank">Satournow!</a>
+          </button>
           <p class="subtittle">Proyecto Final Front End / Diseño UX-UI + Front End</p>
-          <img src="../assets/satournow.png" alt="proyecto4" class="picture img-fluid">
+          <img src="../assets/satournow.png" alt="proyecto4" class="picture img-fluid" href="https://jesupet.github.io/SaturnoGit/">
         </div>
       </div>
     </section>
@@ -95,7 +99,7 @@
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 50% }
 }
 
 /* The typewriter cursor effect */
@@ -132,6 +136,13 @@ section {
 .btn-purple {
   font-size: 20px;
 }
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #5241B8;
+}
 .btn-purple:hover {
   background-color: #fff;
   color: #5241B8;
@@ -141,4 +152,5 @@ section {
   color:#5241B8;
   margin-top: 10px;
 }
+
 </style>

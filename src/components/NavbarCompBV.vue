@@ -7,10 +7,10 @@
       <div class="collapse navbar-collapse nav-jesu" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/#about-me">About Me</router-link>
+            <router-link class="nav-link" aria-current="page" to="/">About Me</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/#my-proyects">My Projects</router-link>
+            <router-link class="nav-link" to="/">My Projects</router-link>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Tool Kit</a>
