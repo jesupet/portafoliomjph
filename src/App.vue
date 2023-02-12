@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-    <NavbarCompBV />
+    <NavbarCompBV/>
     <router-view/>
     <FooterComp />
   </div>
 </template>
 
 <script>
-import NavbarCompBV from './components/NavbarCompBV.vue'
 import FooterComp from './components/FooterComp.vue'
+import NavbarCompBV from './components/NavbarCompBV.vue'
 
 export default {
   name: "App",

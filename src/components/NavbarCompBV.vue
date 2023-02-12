@@ -1,36 +1,38 @@
 <template>
   <nav class="navbar navbar-expand-lg fixed-top mt-3">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse nav-jesu" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
-          <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/">About Me</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/">My Projects</router-link>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tool Kit</a>
-          </li>
-          <li class="nav-item">
-            <button type="button" class="btn btn-purple rounded-pill" to="/#/contact-form">Write Me!</button>
-          </li>
-        </ul>
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse nav-jesu" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+            <li class="nav-item">
+              <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'aboutme'}">About Me</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'myprojects'}">My Projects</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'toolkit'}">Tool Kit</router-link>
+            </li>
+            <div class="d-inline ml-3">
+              <ContactForm class="d-inline"/>
+            </div>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 </template>
 
 <script>
+import ContactForm from './ContactForm.vue'
 
 export default {
   name: "NavbarComp",
   computed: {
     
   },
+  components: {ContactForm}
 };
 </script>
 

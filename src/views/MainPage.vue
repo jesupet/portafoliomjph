@@ -7,7 +7,7 @@
         <source src="../assets/galaxy.mp4" type="video/mp4">
       </video>-->
     </header>
-    <section id="about-me" class="container">
+    <section id="aboutme" class="container">
       <h2 class="main-title">About Me</h2>
       <div class="row">
         <div class="col-lg-6 col-xs-12 text-center">
@@ -22,7 +22,7 @@
         </div>
       </div>
     </section>
-    <section id="my-projects" class="container-fluid">
+    <section id="myprojects" class="container-fluid">
       <h2 class="main-title">My Projects</h2>
       <div class="row mx-2">
         <div class="col-sm-6 col-xs-12">
@@ -37,11 +37,11 @@
             <a href="https://jesupet.github.io/SaturnoGit/" class="link-web" target="_blank">Satournow!</a>
           </button>
           <p class="subtittle">Proyecto Final Front End / Diseño UX-UI + Front End</p>
-          <img src="../assets/satournow.png" alt="proyecto4" class="picture img-fluid" href="https://jesupet.github.io/SaturnoGit/">
+          <img src="../assets/satournow.png" alt="proyecto4" class="picture img-fluid">
         </div>
       </div>
     </section>
-    <section id="tool-kit" class="container">
+    <section id="toolkit" class="container">
       <h2 class="main-title">Tool Kit</h2>
       <div class="row">
         <div class="col-lg-3 col-sm-6 col-xs-12">
@@ -61,8 +61,39 @@
   </div>
 </template>
 
+<script>
+
+export default {
+  computed: {
+    
+  },
+
+};
+</script>
 
 <style>
+.nav-jesu{
+  position: fixed;
+  right: 40px;
+  top: 20px;
+
+}
+.btn-purple:hover {
+  background-color: #fff;
+  color: #5241B8;
+}
+.nav-item {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-left: 30px;
+}
+
+.nav-link {
+  color:#fff;
+}
+.nav-link:hover {
+  color:#5241B8;
+}
 .header-container {
   display: flex;
   align-items: center;
@@ -127,7 +158,7 @@ section {
   font-size: 14px;
   font-style: italic;
 }
-#my-projects {
+#myprojects {
   background-color: #71F4CD;
 }
 .col-sm-6 {
