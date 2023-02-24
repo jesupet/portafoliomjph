@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top mt-3">
+  <nav class="navbar navbar-expand-lg pt-3 pb-3"  :class="{ 'navbar': true, 'scrolled': scrolled }">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -12,12 +12,14 @@
             <li class="nav-item">
               <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'myprojects'}">My Projects</router-link>
             </li>
-            <li class="nav-item">
+            <li class="nav-item ml-3">
               <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'toolkit'}">Tool Kit</router-link>
             </li>
-            <div class="d-inline ml-3">
-              <ContactForm class="d-inline"/>
-            </div>
+            <li class="nav-item ml-3">
+              <button type="button" class="btn btn-purple rounded-pill">
+                <router-link class="nav-link" aria-current="page" :to="{name: 'mainpage', hash: '#'+'contactform'}">Write Me!</router-link>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -25,23 +27,40 @@
 </template>
 
 <script>
-import ContactForm from './ContactForm.vue'
-
 export default {
   name: "NavbarComp",
-  computed: {
-    
+  data() {
+    return {
+      scrolled: false,
+    };
   },
-  components: {ContactForm}
+  methods: {
+    onScroll() {
+      this.scrolled = window.scrollY > 0;
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.onScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  },
 };
 </script>
 
 <style scoped>
-.nav-jesu{
+.navbar{
   position: fixed;
-  right: 40px;
-  top: 20px;
-
+  right: 0px;
+  top: 0px;
+  left: 0px;
+  height: 75px;
+}
+.navbar{
+  background-color: transparent;
+}
+.navbar.scrolled {
+  background-color: rgba(60, 60, 60, 0.4);
 }
 .btn-purple:hover {
   background-color: #fff;
@@ -58,6 +77,9 @@ export default {
 }
 .nav-link:hover {
   color:#5241B8;
+}
+.rounded-pill {
+  text-align: center;
 }
 
 </style>
